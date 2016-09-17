@@ -4,7 +4,7 @@
   angular.module('LunchCheck',[])
   .controller('LunchCheckController', LunchCheckController);
 
-  LunchCheckController.$inject = ['$scope']
+  //LunchCheckController.$inject = ['$scope']
 
   function LunchCheckController ($scope){
 
@@ -25,7 +25,10 @@
           }
         }
         if(count > 3 ){
+          $scope.color = "color:yellow";
+          $scope.borderColor = "border-color:red";
           $scope.messageOutput = "Too much!";
+
         }else{
           $scope.messageOutput = "Enjoy!";
         }
